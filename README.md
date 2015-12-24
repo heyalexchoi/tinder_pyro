@@ -59,7 +59,7 @@ pyro.like(user_id)
 pyro.dislike(user_id)
 
 # Send a saucy message
-pyro.send_message(user_id, 'I luv u plz b my friend')
+pyro.send_message(match_id, 'I luv u plz b my friend')
 ```
 
 **Interacting with yourself**

@@ -31,9 +31,9 @@ module TinderPyro
       @requestor.get_request(:profile)
     end
 
-    def send_message(user_id, message)
+    def send_message(match_id, message)
       @requestor.post_request(
-        "user/matches/#{user_id}",
+        "user/matches/#{match_id}",
         message: message
       )
     end
@@ -44,6 +44,10 @@ module TinderPyro
 
     def update_location(latitude, longitude)
       @requestor.post_request("user/ping", lat: latitude, lon: longitude)
+    end
+
+    def use_auth_token(token)
+      @requestor.auth_token = token
     end
   end
 end
